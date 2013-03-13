@@ -1,0 +1,12 @@
+{application, tasks_dispatcher,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { tasks_dispatcher_app, []}},
+  {env, [{queues,        [{<<"queue1">>, 5, "http://url1"}, {<<"queue2">>, 2, "http://url2"}]}]}
+ ]}.

@@ -1,0 +1,12 @@
+{application,tasks_dispatcher,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{tasks_dispatcher_app,[]}},
+              {env,[{queues,[{<<"task_queue">>,5,
+                              "http://oplaty.ria.local/hash"},
+                             {<<"queue2">>,2,
+                              "http://oplaty.ria.local/hash2"}]}]},
+              {modules,[queue_listener,queue_sup,tasks_dispatcher,
+                        tasks_dispatcher_app,tasks_dispatcher_sup]}]}.
